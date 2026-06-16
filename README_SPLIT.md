@@ -1,0 +1,1 @@
+This package contains the original React file and a recommended component structure for refactoring.
