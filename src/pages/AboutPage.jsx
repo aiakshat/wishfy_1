@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Icons from '../components/icons/Icons';
+import ClientsSection from '../components/ClientsSection';
 
 const strengths = [
   'Integrated landscaping, horticulture, precision agriculture, and plant science',
@@ -60,17 +61,6 @@ const processSteps = [
   }
 ];
 
-const clients = [
-  { name: 'Qutub Minar', category: 'Heritage Landmarks' },
-  { name: 'DLF Camellias', category: 'Residential' },
-  { name: 'Westside', category: 'Retail' },
-  { name: 'Radisson', category: 'Hospitality' },
-  { name: 'The Imperial', category: 'Hospitality' },
-  { name: 'Varanasi Airport', category: 'Airports' },
-  { name: 'Darbhanga Airport', category: 'Airports' },
-  { name: 'Barista', category: 'Retail' }
-];
-
 const detailedServices = {
   softscape: [
     'Lawns & turfs',
@@ -113,20 +103,6 @@ const detailedServices = {
 };
 
 export default function AboutPage({ setActiveModal }) {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const scroll = (direction) => {
-    const container = document.querySelector('[data-carousel]');
-    if (!container) return;
-    
-    const scrollAmount = 300;
-    if (direction === 'left') {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <main className="bg-slate-50">
       <section className="relative overflow-hidden bg-emerald-950 text-white">
@@ -190,7 +166,7 @@ export default function AboutPage({ setActiveModal }) {
       </section>
 
       {/* MD's Message Section */}
-      <section className="py-16 lg:py-24 bg-white border-y border-emerald-100">
+      <section id="ceo-message" className="py-16 lg:py-24 bg-white border-y border-emerald-100 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 order-2 lg:order-1">
@@ -217,11 +193,12 @@ export default function AboutPage({ setActiveModal }) {
                 <p className="text-xs text-slate-500 font-bold">Managing Director & Chief Executive Officer</p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl p-8 lg:p-12 text-white flex items-center justify-center min-h-96 order-1 lg:order-2">
-              <div className="text-center">
-                <Icons.Leaf className="w-24 h-24 mx-auto mb-4 opacity-30" />
-                <p className="text-lg font-black">Vision for Tomorrow</p>
-              </div>
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-emerald-100 order-1 lg:order-2 aspect-[4/3] lg:aspect-auto lg:h-full min-h-[400px]">
+              <img
+                src="/images/about-ceo.jpg"
+                alt="Akshat Garg"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -310,54 +287,7 @@ export default function AboutPage({ setActiveModal }) {
         </div>
       </section>
 
-      {/* Notable Clients Carousel */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 block mb-4">Client Testimonials</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-emerald-950 tracking-tight">
-              Trusted by Leading Brands
-            </h2>
-          </div>
-
-          <div className="relative">
-            <div 
-              data-carousel
-              className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth"
-              style={{ scrollBehavior: 'smooth' }}
-            >
-              {clients.map((client, idx) => (
-                <div
-                  key={idx}
-                  className="flex-shrink-0 w-64 bg-white rounded-2xl border border-emerald-100 p-6 space-y-4 snap-center"
-                >
-                  <div className="flex items-center justify-center h-32 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl">
-                    <span className="text-lg font-black text-emerald-700 text-center px-4">{client.name}</span>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">{client.category}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={() => scroll('left')}
-              className="absolute left-0 top-1/3 -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-emerald-50 border border-emerald-200 rounded-full w-10 h-10 flex items-center justify-center transition-all"
-              aria-label="Scroll left"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              className="absolute right-0 top-1/3 -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-emerald-50 border border-emerald-200 rounded-full w-10 h-10 flex items-center justify-center transition-all"
-              aria-label="Scroll right"
-            >
-              →
-            </button>
-          </div>
-        </div>
-      </section>
+      <ClientsSection />
 
       {/* UAE Operations */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 text-white border-y border-emerald-800">

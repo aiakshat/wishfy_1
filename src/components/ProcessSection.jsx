@@ -67,6 +67,16 @@ export default function ProcessSection() {
             ))}
           </div>
 
+          <div className="text-center mt-12">
+            <a
+              href="/our-process"
+              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg group text-sm"
+            >
+              Explore our process
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
         </div>
       </section>
 

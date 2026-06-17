@@ -25,19 +25,41 @@ export default function AboutSection() {
                 <p>
                   Our multidisciplinary team combines landscape architecture, horticulture, agricultural engineering, and meticulous execution expertise to deliver solutions that are aesthetically inspiring, environmentally responsible, and built to last.
                 </p>
+                <div className="pt-2">
+                  <a
+                    href="/about"
+                    className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg group text-sm"
+                  >
+                    Know More About Us
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
 
               <div className="p-6 bg-slate-50 rounded-2xl border border-emerald-100 flex flex-col sm:flex-row gap-6 items-center">
-                <div className="w-16 h-16 rounded-full bg-emerald-900 flex-shrink-0 text-white flex items-center justify-center font-bold text-xl border-2 border-emerald-400">
-                  AG
+                <div className="w-full sm:w-[40%] flex-shrink-0">
+                  <img
+                    src="/images/about-ceo.jpg"
+                    alt="Akshat Garg"
+                    className="w-full h-auto object-cover rounded-xl shadow-md border border-emerald-100"
+                  />
                 </div>
-                <div>
-                  <blockquote className="text-sm font-semibold italic text-emerald-950">
+                <div className="w-full sm:w-[60%] space-y-3">
+                  <blockquote className="text-sm font-semibold italic text-emerald-950 leading-relaxed">
                     "At Wishfy, we don't just build green spaces - we create experiences that elevate everyday living, creating an environmental legacy."
                   </blockquote>
-                  <cite className="block mt-2 text-xs font-bold uppercase tracking-widest text-emerald-600 not-italic">
-                    — Akshat Garg (MD & CEO, Wishfy Greens)
-                  </cite>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-emerald-100/50">
+                    <cite className="block text-xs font-bold uppercase tracking-widest text-emerald-600 not-italic">
+                      — Akshat Garg (MD & CEO)
+                    </cite>
+                    <a
+                      href="/about#ceo-message"
+                      className="text-xs font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors inline-flex items-center gap-1 group"
+                    >
+                      Read MD's Message
+                      <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
