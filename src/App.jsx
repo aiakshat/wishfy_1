@@ -21,6 +21,7 @@ import ServicePage from './pages/ServicePage';
 import OurWorkPage from './pages/OurWorkPage';
 import OurProcessPage from './pages/OurProcessPage';
 import ContactUsPage from './pages/ContactUsPage';
+import useSEO from './hooks/useSEO';
 
 
 export default function App() {
@@ -31,6 +32,121 @@ export default function App() {
   const isContactPage = pathname === '/contact-us';
   const isServicePage = pathname.startsWith('/services/');
   const serviceSlug = isServicePage ? pathname.replace(/^\/services\//, '').replace(/\/$/, '') : null;
+
+  // Dynamic SEO & Structured Schema markup config
+  let seoTitle = 'Premium Landscaping & Green Infrastructure';
+  let seoDescription = 'Wishfy Greens delivers premium landscape design, climate-controlled greenhouses, rooftop terrace gardens, and B2B plant supply across India and UAE.';
+  let seoSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Wishfy Greens",
+    "image": "https://wishfygreens.com/images/log-trans.png",
+    "telephone": "+91 96256 79829",
+    "email": "sales@wishfygreens.com",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor H-146 & H-147, Sec 63",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Suite 2001, The Citadel Tower, Marasi Dr, Business Bay",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      }
+    ]
+  };
+
+  if (isAboutPage) {
+    seoTitle = 'About Us | Akshat Garg MD & CEO Message';
+    seoDescription = 'Learn about Wishfy Greens since 2023. Meet Akshat Garg, Managing Director & CEO, and explore our licensed operations in India and Dubai.';
+    seoSchema = {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Wishfy Greens",
+      "description": "Learn about Wishfy Greens, premium landscape design, horticulture, and sustainable greenhouse developers."
+    };
+  } else if (isWorkPage) {
+    seoTitle = 'Landscape & Greenhouse Project Portfolio';
+    seoDescription = 'Browse our signature projects portfolio featuring heritage restoration at Qutub Minar, Varanasi Airport landscaping, and premium residential spaces.';
+    seoSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Our Premium Portfolio - Wishfy Greens",
+      "description": "Showcase of signature projects in India and UAE."
+    };
+  } else if (isProcessPage) {
+    seoTitle = 'Our 4-Step Landscape Design & Installation Process';
+    seoDescription = 'Discover our step-by-step landscape execution blueprint: from discovery & site consultation, custom design, to installation and maintenance.';
+    seoSchema = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How We Bring Your Vision To Life",
+      "description": "4-step execution process for landscape and greenhouse projects.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Discovery & Consultation",
+          "text": "On-site audit to understand requirements, soil, climate, and budget."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Custom Design Creation",
+          "text": "Blueprints, 3D visualizations, and plant flora detailing."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Expert Installation",
+          "text": "Preparing structural foundations, drip layouts, and flora deployment."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Care & Maintenance",
+          "text": "Handover guides and automated maintenance routines."
+        }
+      ]
+    };
+  } else if (isContactPage) {
+    seoTitle = 'Contact Us | Noida & Dubai Offices';
+    seoDescription = 'Contact Wishfy Greens for premium landscape designs, horticulture consulting, and agricultural polyhouses. Noida: +91 96256 79829 | Dubai: +971 50 450 3699';
+    seoSchema = {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Wishfy Greens",
+      "description": "Contact information for Wishfy Greens in Noida, India and Dubai, UAE."
+    };
+  } else if (isServicePage && serviceSlug) {
+    const serviceTitles = {
+      'softscape-landscaping': 'Softscape Landscaping',
+      'hardscape-landscaping': 'Hardscape Landscaping',
+      'rooftop-landscaping': 'Rooftop & Terrace Landscaping',
+      'water-feature-landscaping': 'Water Features & Koi Ponds',
+      'sustainable-landscaping': 'Sustainable Green Infrastructure',
+      'large-scale-landscaping': 'Large Scale Commercial Landscaping',
+      'b2b-plant-supply': 'B2B Bulk Plant & Crop Supply',
+      'landscape-maintenance': 'Landscape & Horticultural Maintenance'
+    };
+    const title = serviceTitles[serviceSlug] || 'Green Services';
+    seoTitle = `${title} Services`;
+    seoDescription = `Explore our expert ${title} capabilities, highlights, and specialized engineering projects built across India and the UAE.`;
+    seoSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": title,
+      "description": seoDescription,
+      "provider": {
+        "@type": "Organization",
+        "name": "Wishfy Greens"
+      }
+    };
+  }
+
+  useSEO({ title: seoTitle, description: seoDescription, schema: seoSchema });
+
   const [region, setRegion] = useState('global');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
