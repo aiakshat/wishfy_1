@@ -42,13 +42,32 @@ export default function App() {
     setTimeout(() => setNotification(''), 4000);
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     setFormSubmitted(true);
-    setTimeout(() => {
-      setActiveModal('success');
+    
+    const formData = new FormData(event.target);
+    formData.append("access_key", "b5d3a0c8-79c6-417f-b421-06acb2435ae3");
+    formData.append("subject", "New Consultation Request - Wishfy Greens");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+      if (data.success) {
+        setActiveModal('success');
+        showToast('Consultation request submitted successfully!');
+      } else {
+        alert(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again later.');
+    } finally {
       setFormSubmitted(false);
-    }, 800);
+    }
   };
 
   return (

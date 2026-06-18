@@ -50,10 +50,23 @@ export default function OurWorkPage({ setActiveModal }) {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // In a real application, submit data to CRM / backend
     setSubmitted(true);
+
+    const formDataToSend = new FormData(e.target);
+    formDataToSend.append("access_key", "b5d3a0c8-79c6-417f-b421-06acb2435ae3");
+    formDataToSend.append("subject", "Catalogue Download Request - Wishfy Greens");
+
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+      setFormData({ name: '', email: '', phone: '' });
+    } catch (err) {
+      console.error("Failed to submit catalogue request to Web3Forms:", err);
+    }
   };
 
   const filteredProjects = detailedProjects.filter(
@@ -229,6 +242,7 @@ export default function OurWorkPage({ setActiveModal }) {
                     <label className="text-[10px] font-black uppercase tracking-wider text-slate-500">Full Name</label>
                     <input
                       type="text"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -241,6 +255,7 @@ export default function OurWorkPage({ setActiveModal }) {
                     <label className="text-[10px] font-black uppercase tracking-wider text-slate-500">Email Address</label>
                     <input
                       type="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -253,6 +268,7 @@ export default function OurWorkPage({ setActiveModal }) {
                     <label className="text-[10px] font-black uppercase tracking-wider text-slate-500">Phone Number</label>
                     <input
                       type="tel"
+                      name="phone"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}

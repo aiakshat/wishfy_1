@@ -10,14 +10,32 @@ export default function ContactUsPage({setActiveModal}) {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormSubmitted(true);
-    setTimeout(() => {
+
+    const formDataToSend = new FormData(e.target);
+    formDataToSend.append("access_key", "b5d3a0c8-79c6-417f-b421-06acb2435ae3");
+    formDataToSend.append("subject", "New Contact Message - Wishfy Greens");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+      const data = await response.json();
+      if (data.success) {
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        alert('Message sent successfully! Our horticultural consultant will get back to you shortly.');
+      } else {
+        alert(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again later.');
+    } finally {
       setFormSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      alert('Message sent successfully! Our horticultural consultant will get back to you shortly.');
-    }, 1000);
+    }
   };
 
   return (
@@ -46,6 +64,7 @@ export default function ContactUsPage({setActiveModal}) {
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-widest mb-2">Your Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -59,6 +78,7 @@ export default function ContactUsPage({setActiveModal}) {
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-widest mb-2">Email Address</label>
                   <input 
                     type="email" 
+                    name="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -70,6 +90,7 @@ export default function ContactUsPage({setActiveModal}) {
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-widest mb-2">Phone Number</label>
                   <input 
                     type="tel" 
+                    name="phone"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -83,6 +104,7 @@ export default function ContactUsPage({setActiveModal}) {
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-widest mb-2">Project Requirements</label>
                 <textarea 
                   rows="4"
+                  name="message"
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}

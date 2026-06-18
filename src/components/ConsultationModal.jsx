@@ -28,23 +28,23 @@ export default function ConsultationModal({isOpen, onClose, onSubmit, formSubmit
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Full Name</label>
-                    <input required type="text" placeholder="e.g. Rahul Sharma" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
+                    <input name="name" required type="text" placeholder="e.g. Rahul Sharma" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
                   </div>
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Contact Phone</label>
-                    <input required type="tel" placeholder="e.g. +91 98765 43210" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
+                    <input name="phone" required type="tel" placeholder="e.g. +91 98765 43210" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
                   </div>
                 </div>
 
                 <div>
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Email Address</label>
-                  <input required type="email" placeholder="e.g. rahul@example.com" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
+                  <input name="email" required type="email" placeholder="e.g. rahul@example.com" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Target Hub Location</label>
-                    <select className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 bg-white">
+                    <select name="location" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 bg-white">
                       <option value="noida">Noida / Delhi NCR, India</option>
                       <option value="dubai">Business Bay, Dubai, UAE</option>
                       <option value="other">Other/Pan-India Sourcing</option>
@@ -52,7 +52,7 @@ export default function ConsultationModal({isOpen, onClose, onSubmit, formSubmit
                   </div>
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Desired Service Type</label>
-                    <select className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 bg-white">
+                    <select name="service" className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 bg-white">
                       <option value="terrace">Terrace / Rooftop Garden</option>
                       <option value="landscape">Commercial Landscaping</option>
                       <option value="greenhouse">Climate-Controlled Greenhouse</option>
@@ -64,7 +64,7 @@ export default function ConsultationModal({isOpen, onClose, onSubmit, formSubmit
 
                 <div>
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 block mb-1">Brief Description of Project Area</label>
-                  <textarea rows="3" placeholder="Describe layout size, direct sunlight access, and overall vision..." className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800"></textarea>
+                  <textarea name="message" rows="3" placeholder="Describe layout size, direct sunlight access, and overall vision..." className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800"></textarea>
                 </div>
 
                 <button 
