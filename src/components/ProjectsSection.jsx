@@ -38,16 +38,27 @@ export default function ProjectsSection({region, setRegion}) {
             {projects.filter(p => region === 'all' || region === 'global' || p.region === region).map((proj, idx) => (
               <div key={idx} className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 group">
                 
-                {/* Visual Image Placeholder */}
-                <div className="aspect-video w-full bg-slate-800 relative flex items-center justify-center p-6 text-center text-white overflow-hidden">
-                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:12px_12px] group-hover:scale-110 transition-transform duration-300"></div>
-                  <div className="relative z-10 space-y-1">
-                    <Icons.Leaf className="w-8 h-8 text-emerald-400 mx-auto opacity-75" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-emerald-300 block">{proj.imgDesc}</span>
-                  </div>
+                {/* Visual Image */}
+                <div className="aspect-video w-full relative overflow-hidden bg-slate-800">
+                  {proj.image ? (
+                    <img
+                      src={proj.image}
+                      alt={proj.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center text-white">
+                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:12px_12px] group-hover:scale-110 transition-transform duration-300"></div>
+                      <div className="relative z-10 space-y-1">
+                        <Icons.Leaf className="w-8 h-8 text-emerald-400 mx-auto opacity-75" />
+                        <span className="text-[10px] font-black uppercase tracking-widest text-emerald-300 block">{proj.imgDesc}</span>
+                      </div>
+                    </div>
+                  )}
                   
                   {/* Absolute region sticker */}
-                  <span className="absolute top-3 left-3 bg-slate-900/90 text-[9px] font-bold tracking-widest text-white px-2.5 py-1 rounded-full uppercase">
+                  <span className="absolute top-3 left-3 bg-slate-900/90 text-[9px] font-bold tracking-widest text-white px-2.5 py-1 rounded-full uppercase z-10">
                     {proj.region === 'india' ? '🇮🇳 India Operations' : '🇦🇪 UAE Operations'}
                   </span>
                 </div>

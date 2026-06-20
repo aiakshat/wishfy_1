@@ -12,9 +12,9 @@ export const detailedProjects = [
       "Pedestrian stone pathway integration"
     ],
     images: [
-      "/images/Large-Scale-landscaping.png",
-      "/images/Softscape-Landscaping.png",
-      "/images/Landscape-Maintenance.png"
+      "/images/work/qutub_minar_1.jpg",
+      "/images/work/qutub_minar_2.jpg",
+      "/images/work/qutub_minar_3.jpg"
     ]
   },
   {
@@ -30,9 +30,9 @@ export const detailedProjects = [
       "Automated high-pressure misting systems"
     ],
     images: [
-      "/images/Large-Scale-landscaping.png",
-      "/images/Water-feature-landscaping.png",
-      "/images/Hardscape-Landscaping.png"
+      "/images/work/Varanasi_airport_1.jpg",
+      "/images/work/Darbhanga_1.jpg",
+      "/images/work/Varanasi_airport_2.jpg"
     ]
   },
   {
@@ -48,9 +48,9 @@ export const detailedProjects = [
       "Smart moisture sensors with IoT tracking"
     ],
     images: [
-      "/images/Rooftop-landscaping.png",
-      "/images/Softscape-Landscaping.png",
-      "/images/Sustainable-Green-Infrastructure.png"
+      "/images/work/DLF Camellias Residential Turf_1.jpg",
+      "/images/work/DLF Camellias Residential Turf_2.jpg",
+      "/images/work/DLF Camellias Residential Turf_3.jpg"
     ]
   },
   {
@@ -84,9 +84,9 @@ export const detailedProjects = [
       "Comprehensive weekly health and nutrient care"
     ],
     images: [
-      "/images/Softscape-Landscaping.png",
-      "/images/Water-feature-landscaping.png",
-      "/images/service-4.jpg"
+      "/images/work/Imperial_1.jpg",
+      "/images/work/Imperial_2.jpg",
+      "/images/work/Imperial_3.jpg"
     ]
   },
   {
@@ -102,9 +102,9 @@ export const detailedProjects = [
       "IoT-connected nutrient and fertigation monitoring"
     ],
     images: [
-      "/images/greenhouse.jpg",
-      "/images/Sustainable-Green-Infrastructure.png",
-      "/images/B2B-Plant-&-Crop-Supply.png"
+      "/images/work/polyhouse_1.jpg",
+      "/images/work/polyhouse_2.jpg",
+      "/images/work/polyhouse_3.jpg"
     ]
   },
   {

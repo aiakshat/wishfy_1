@@ -9,7 +9,7 @@ export default function GreenhouseSection({setActiveModal}) {
         id="greenhouse" 
         className="py-24 lg:py-36 text-white scroll-mt-20 overflow-hidden relative bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(2, 44, 34, 0.94), rgba(15, 23, 42, 0.88)), url('/images/greenhouse.jpg')`,
+          backgroundImage: `linear-gradient(to right, rgba(2, 44, 34, 0.94), rgba(15, 23, 42, 0.88)), url('/images/work/polyhouse_1.jpg')`,
         }}
       >
         {/* Absolute geometric light accents */}
