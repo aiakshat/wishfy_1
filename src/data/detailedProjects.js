@@ -67,7 +67,7 @@ export const detailedProjects = [
     ],
     images: [
       "/images/work/downtow_corporate_patio.jpg",
-      "/images/Sustainable-Green-Infrastructure.png",
+      "/images/work/downtow_corporate_patio_2.jpg",
       "/images/Landscape-Maintenance.png"
     ]
   },
