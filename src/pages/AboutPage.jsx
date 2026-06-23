@@ -46,18 +46,18 @@ const processSteps = [
   },
   {
     step: '2',
-    title: 'Custom Design Creation',
-    description: 'Detailed blueprints, 3D visualizations, and plant selections tailored to your space. Review and refine until it\'s perfect.'
+    title: 'Custom Design Creation - Draftsman',
+    description: 'Our professional draftsmen create bespoke blueprints, custom layouts, and highly detailed 3D designs for your specific requirements.'
   },
   {
     step: '3',
-    title: 'Expert Installation',
-    description: 'Professional team brings the design to life with premium materials, skilled craftsmanship, and attention to every detail.'
+    title: 'Structural Foundation & Installation',
+    description: 'Our skilled teams construct robust structural foundations, install precise drainage, and establish the engineering groundwork for your space.'
   },
   {
     step: '4',
     title: 'Care & Maintenance',
-    description: 'Comprehensive handover with care guides, seasonal tips, and optional ongoing maintenance to keep your space thriving.'
+    description: 'We provide customized care guides, set up recurring maintenance routines, and share expert insights to keep your green assets in pristine condition.'
   }
 ];
 
@@ -146,7 +146,7 @@ export default function AboutPage({ setActiveModal }) {
                 We do not just build green spaces. We create living environments.
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                The brochure frames Wishfy Greens around a simple belief: sustainability is not only a responsibility, but an opportunity to create a better future. That belief guides how the team approaches public spaces, homes, hotels, campuses, farms, and commercial destinations.
+                At the heart of Wishfy Greens is our core philosophy: to create living environments that seamlessly blend design, nature, and modern technology. We believe sustainability is not only a responsibility, but an opportunity to build a better future. This philosophy guides how our team designs and executes public spaces, homes, hotels, campuses, farms, and commercial destinations.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Every project blends design sensitivity with technical execution, from plant selection and irrigation planning to greenhouse automation and long-term maintenance.

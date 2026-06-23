@@ -29,6 +29,6 @@ export const projects = [
     loc: "Business Bay, Dubai",
     region: "uae",
     imgDesc: "Desert Hardscaping",
-    image: "/images/Hardscape-Landscaping.png"
+    image: "/images/work/downtow_corporate_patio.jpg"
   }
 ];

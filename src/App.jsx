@@ -95,18 +95,18 @@ export default function App() {
         },
         {
           "@type": "HowToStep",
-          "name": "Custom Design Creation",
-          "text": "Blueprints, 3D visualizations, and plant flora detailing."
+          "name": "Custom Design Creation - Draftsman",
+          "text": "Technical CAD layouts, architectural blueprints, and detailed 3D designs."
         },
         {
           "@type": "HowToStep",
-          "name": "Expert Installation",
-          "text": "Preparing structural foundations, drip layouts, and flora deployment."
+          "name": "Structural Foundation & Installation",
+          "text": "Laying solid structural foundations, drainage systems, and structural work."
         },
         {
           "@type": "HowToStep",
           "name": "Care & Maintenance",
-          "text": "Handover guides and automated maintenance routines."
+          "text": "Customized care guides and scheduled maintenance routines."
         }
       ]
     };

@@ -32,18 +32,18 @@ export default function ProcessSection() {
               },
               {
                 step: "Step 2",
-                title: "Custom Design Creation",
-                desc: "Our architectural draftspersons draw blueprints, design precise 3D visualizations, and detail lists for matching plants."
+                title: "Custom Design Creation - Draftsman",
+                desc: "Our professional draftsmen create bespoke blueprints, custom layouts, and highly detailed 3D designs for your specific requirements."
               },
               {
                 step: "Step 3",
-                title: "Expert Installation",
-                desc: "Highly qualified landscapers prepare structural foundations, organize drip water layouts, and deploy certified plant flora safely."
+                title: "Structural Foundation & Installation",
+                desc: "Our skilled teams construct robust structural foundations, install precise drainage, and establish the engineering groundwork for your space."
               },
               {
                 step: "Step 4",
                 title: "Care & Maintenance",
-                desc: "We hand over comprehensive care guides along with automated maintenance routines ensuring your system continues to flourish."
+                desc: "We provide customized care guides, set up recurring maintenance routines, and share expert insights to keep your green assets in pristine condition."
               }
             ].map((st, idx) => (
               <div key={idx} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 relative z-10 hover:shadow-lg transition-shadow">

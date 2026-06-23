@@ -66,7 +66,7 @@ export const detailedProjects = [
       "Passive shading design for outdoor seating"
     ],
     images: [
-      "/images/Hardscape-Landscaping.png",
+      "/images/work/downtow_corporate_patio.jpg",
       "/images/Sustainable-Green-Infrastructure.png",
       "/images/Landscape-Maintenance.png"
     ]
@@ -90,9 +90,9 @@ export const detailedProjects = [
     ]
   },
   {
-    title: "Al Barsha Smart Polyhouse Facility",
+    title: "Al Khawaneej Polyhouse Facility",
     category: "Precision Agriculture",
-    loc: "Al Barsha, Dubai, UAE",
+    loc: "Al Khawaneej, Dubai, UAE",
     region: "uae",
     desc: "Designing and building a state-of-the-art climate-controlled polyhouse greenhouse for organic hydroponic vegetable farming with real-time IoT controls.",
     scope: [
@@ -126,9 +126,9 @@ export const detailedProjects = [
     ]
   },
   {
-    title: "Emirates Hills Residential Estate",
+    title: "Nad Al Sheba Residential Estate",
     category: "Luxury Residential",
-    loc: "Emirates Hills, Dubai, UAE",
+    loc: "Nad Al Sheba, Dubai, UAE",
     region: "uae",
     desc: "Complete redesign of a private luxury villa backyard, featuring a modern infinity-edge pond, formal lawn, and tropical palm clusters.",
     scope: [

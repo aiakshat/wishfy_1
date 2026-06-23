@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     quote: "Outstanding residential landscaping. They redesigned our entire backyard with beautiful stone pathways, native plants, and a stunning water fountain. The maintenance team is also extremely professional.",
-    author: "Villa Owner, Emirates Hills (Dubai)",
+    author: "Villa Owner, Nad Al Sheba (Dubai)",
     rating: 5
   }
 ];
