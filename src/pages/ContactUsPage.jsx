@@ -140,11 +140,11 @@ export default function ContactUsPage({setActiveModal}) {
                   <svg className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.557-5.132-3.865-6.689-6.69l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
-                  <span>+91 96256 79829</span>
+                  <a href="tel:+919625679829" className="hover:text-emerald-600 font-bold">+91 96256 79829</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>✉</span>
-                  <span>sales@wishfygreens.com</span>
+                  <a href="mailto:sales@wishfygreens.com" className="hover:underline">sales@wishfygreens.com</a>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ContactUsPage({setActiveModal}) {
               <span className="inline-flex bg-amber-100 text-amber-800 text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full">
                 🇦🇪 Dubai Headquarters
               </span>
-              <h3 className="text-lg font-extrabold text-emerald-950">Wishfy Greens Landscape Works LLC</h3>
+              <h3 className="text-lg font-extrabold text-emerald-950">Wishfy Greens Landscape & Gardening Works LLC</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Suite 2001, The Citadel Tower, Marasi Dr, Business Bay, Dubai, UAE
               </p>
@@ -163,11 +163,11 @@ export default function ContactUsPage({setActiveModal}) {
                   <svg className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.557-5.132-3.865-6.689-6.69l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
-                  <span>+971 50 450 3699</span>
+                  <a href="tel:+971504503699" className="hover:text-amber-600 font-bold">+971 50 450 3699</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>✉</span>
-                  <span>sales@wishfygreens.com</span>
+                  <a href="mailto:sales@wishfygreens.com" className="hover:underline">sales@wishfygreens.com</a>
                 </div>
               </div>
             </div>

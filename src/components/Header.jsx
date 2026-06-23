@@ -47,7 +47,7 @@ const servicesMenuItems = [
   {
     slug: 'sustainable-landscaping',
     title: 'Sustainable Green Infrastructure',
-    description: 'Drip irrigation, greenhouses, Rainwater harvesting and more.',
+    description: 'Drip irrigation, greenhouses, rainwater harvesting & more',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a7 7 0 007-7c0-3.86-7-11-7-11S5 10.14 5 14a7 7 0 007 7z" />

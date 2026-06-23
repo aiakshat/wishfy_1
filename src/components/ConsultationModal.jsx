@@ -21,7 +21,7 @@ export default function ConsultationModal({isOpen, onClose, onSubmit, formSubmit
               <div className="space-y-1">
                 <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600 block">Personal Consultation Request</span>
                 <h3 className="text-2xl font-black text-emerald-950 tracking-tight">Free Gardening Design Consult</h3>
-                <p className="text-xs text-slate-500">Provide details below to hook you up with our regional horticulturist.</p>
+                <p className="text-xs text-slate-500">Provide details below to connect you with our regional horticulturist.</p>
               </div>
 
               <form onSubmit={onSubmit} className="space-y-4">

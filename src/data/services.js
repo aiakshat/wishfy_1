@@ -1,6 +1,6 @@
 export const services = [
               {
-                title: "Large Scale landscaping",
+                title: "Large-Scale Landscaping",
                 desc: "Custom-designed outdoor spaces that combine beauty, functionality, and sustainability with detailed blueprints & 3D renders.",
                 tag: "Bespoke",
                 image: "/images/service-4.jpg"
@@ -18,13 +18,13 @@ export const services = [
                 image: "/images/service-6.jpg"
               },
               {
-                title: "Rooftop landscaping",
+                title: "Rooftop Landscaping",
                 desc: "Transform empty, high-temperature concrete roofs into vibrant green gardens, outdoor cafes, and sky-lawn community spaces.",
                 tag: "Urban Space",
                 image: "/images/service-7.jpg"
               },
               {
-                title: "Water feature landscaping",
+                title: "Water Feature Landscaping",
                 desc: "Add peaceful motion with custom-filtration koi ponds, modern fountains, cascading water walls, and reflecting pools.",
                 tag: "Serenity",
                 image: "/images/service-8.jpg"

@@ -151,9 +151,9 @@ export default function OurWorkPage({ setActiveModal }) {
 
                   {/* Scope of Work bullet checklist */}
                   <div className="pt-2">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-emerald-950 mb-3 border-b border-slate-100 pb-2">
+                    <h3 className="text-xs font-black uppercase tracking-wider text-emerald-950 mb-3 border-b border-slate-100 pb-2">
                       Scope of Work & Features
-                    </h4>
+                    </h3>
                     <ul className="grid sm:grid-cols-2 lg:grid-cols-1 gap-3.5">
                       {proj.scope.map((item, sIdx) => (
                         <li key={sIdx} className="flex gap-2.5 text-xs text-slate-700 leading-normal items-start">

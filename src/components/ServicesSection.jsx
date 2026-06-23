@@ -3,11 +3,11 @@ import Icons from './icons/Icons';
 import { services } from '../data/services';
 
 const serviceTitleToSlug = {
-  'Large Scale landscaping': 'large-scale-landscaping',
+  'Large-Scale Landscaping': 'large-scale-landscaping',
   'Softscape Landscaping': 'softscape-landscaping',
   'Hardscape Landscaping': 'hardscape-landscaping',
-  'Rooftop landscaping': 'rooftop-landscaping',
-  'Water feature landscaping': 'water-feature-landscaping',
+  'Rooftop Landscaping': 'rooftop-landscaping',
+  'Water Feature Landscaping': 'water-feature-landscaping',
   'Sustainable Green Infrastructure': 'sustainable-landscaping',
   'B2B Plant & Crop Supply': 'b2b-plant-supply',
   'Landscape Maintenance': 'landscape-maintenance'

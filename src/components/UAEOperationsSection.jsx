@@ -1,7 +1,7 @@
 import React from 'react';
 import Icons from './icons/Icons';
 
-export default function UAEOperationsSection({setActiveModal}) {
+export default function UAEOperationsSection({setActiveModal, setRegion}) {
   return (
     <>
       {/* UAE Operations Section (Showcases UAE Commercial details explicitly) */}
@@ -31,7 +31,7 @@ export default function UAEOperationsSection({setActiveModal}) {
                 </div>
                 <div className="grid grid-cols-2 gap-4 border-b border-slate-100 pb-3">
                   <div>
-                    <span className="text-[10px] text-slate-400 uppercase tracking-widest block">Manager Director</span>
+                    <span className="text-[10px] text-slate-400 uppercase tracking-widest block">Managing Director</span>
                     <strong className="text-slate-900 block mt-0.5">Akshat Garg</strong>
                   </div>
                   <div>

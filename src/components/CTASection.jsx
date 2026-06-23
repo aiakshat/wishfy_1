@@ -25,12 +25,12 @@ export default function CTASection({setActiveModal}) {
             >
               Request Free Consultation
             </button>
-            <button 
-              onClick={() => setActiveModal('estimate')}
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-bold px-8 py-4 rounded-xl border border-white/20 backdrop-blur-sm transition-all"
+            <a 
+              href="/#estimator"
+              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-bold px-8 py-4 rounded-xl border border-white/20 backdrop-blur-sm transition-all flex items-center justify-center text-center text-sm font-bold"
             >
               Get Estimated Scope
-            </button>
+            </a>
           </div>
         </div>
       </section>

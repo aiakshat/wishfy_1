@@ -7,20 +7,20 @@ import CTASection from '../components/CTASection';
 const slugToServiceTitle = {
   'softscape-landscaping': 'Softscape Landscaping',
   'hardscape-landscaping': 'Hardscape Landscaping',
-  'rooftop-landscaping': 'Rooftop landscaping',
-  'water-feature-landscaping': 'Water feature landscaping',
+  'rooftop-landscaping': 'Rooftop Landscaping',
+  'water-feature-landscaping': 'Water Feature Landscaping',
   'sustainable-landscaping': 'Sustainable Green Infrastructure',
-  'large-scale-landscaping': 'Large Scale landscaping',
+  'large-scale-landscaping': 'Large-Scale Landscaping',
   'b2b-plant-supply': 'B2B Plant & Crop Supply',
   'landscape-maintenance': 'Landscape Maintenance'
 };
 
 const serviceTitleToSlug = {
-  'Large Scale landscaping': 'large-scale-landscaping',
+  'Large-Scale Landscaping': 'large-scale-landscaping',
   'Softscape Landscaping': 'softscape-landscaping',
   'Hardscape Landscaping': 'hardscape-landscaping',
-  'Rooftop landscaping': 'rooftop-landscaping',
-  'Water feature landscaping': 'water-feature-landscaping',
+  'Rooftop Landscaping': 'rooftop-landscaping',
+  'Water Feature Landscaping': 'water-feature-landscaping',
   'Sustainable Green Infrastructure': 'sustainable-landscaping',
   'B2B Plant & Crop Supply': 'b2b-plant-supply',
   'Landscape Maintenance': 'landscape-maintenance'

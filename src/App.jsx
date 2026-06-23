@@ -233,7 +233,7 @@ export default function App() {
           <ProcessSection />
           <GreenhouseSection setActiveModal={setActiveModal} />
           <ProjectsSection region={region} setRegion={setRegion} />
-          <UAEOperationsSection setActiveModal={setActiveModal} />
+          <UAEOperationsSection setActiveModal={setActiveModal} setRegion={setRegion} />
           <PlantSupplySection setActiveModal={setActiveModal} />
           <ClientsSection />
           <TestimonialsSection />
