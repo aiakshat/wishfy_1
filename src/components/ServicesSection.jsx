@@ -8,6 +8,7 @@ const serviceTitleToSlug = {
   'Hardscape Landscaping': 'hardscape-landscaping',
   'Rooftop Landscaping': 'rooftop-landscaping',
   'Water Feature Landscaping': 'water-feature-landscaping',
+  'Swimming Pool Landscaping': 'swimming-pool-landscaping',
   'Sustainable Green Infrastructure': 'sustainable-landscaping',
   'B2B Plant & Crop Supply': 'b2b-plant-supply',
   'Landscape Maintenance': 'landscape-maintenance'

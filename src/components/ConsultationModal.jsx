@@ -58,6 +58,7 @@ export default function ConsultationModal({isOpen, onClose, onSubmit, formSubmit
                       <option value="greenhouse">Climate-Controlled Greenhouse</option>
                       <option value="balcony">Balcony Setup</option>
                       <option value="water">Koi Pond / Water Features</option>
+                      <option value="swimming-pool">Swimming Pool & Landscaping</option>
                     </select>
                   </div>
                 </div>

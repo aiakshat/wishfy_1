@@ -9,6 +9,7 @@ const slugToServiceTitle = {
   'hardscape-landscaping': 'Hardscape Landscaping',
   'rooftop-landscaping': 'Rooftop Landscaping',
   'water-feature-landscaping': 'Water Feature Landscaping',
+  'swimming-pool-landscaping': 'Swimming Pool Landscaping',
   'sustainable-landscaping': 'Sustainable Green Infrastructure',
   'large-scale-landscaping': 'Large-Scale Landscaping',
   'b2b-plant-supply': 'B2B Plant & Crop Supply',
@@ -21,6 +22,7 @@ const serviceTitleToSlug = {
   'Hardscape Landscaping': 'hardscape-landscaping',
   'Rooftop Landscaping': 'rooftop-landscaping',
   'Water Feature Landscaping': 'water-feature-landscaping',
+  'Swimming Pool Landscaping': 'swimming-pool-landscaping',
   'Sustainable Green Infrastructure': 'sustainable-landscaping',
   'B2B Plant & Crop Supply': 'b2b-plant-supply',
   'Landscape Maintenance': 'landscape-maintenance'
@@ -31,6 +33,7 @@ const servicePageBanners = {
   'hardscape-landscaping': '/images/Hardscape-Landscaping.png',
   'rooftop-landscaping': '/images/Rooftop-landscaping.png',
   'water-feature-landscaping': '/images/Water-feature-landscaping.png',
+  'swimming-pool-landscaping': '/images/Swimming-Pool-Landscaping.png',
   'sustainable-landscaping': '/images/Sustainable-Green-Infrastructure.png',
   'large-scale-landscaping': '/images/Large-Scale-landscaping.png',
   'b2b-plant-supply': '/images/B2B-Plant-&-Crop-Supply.png',
@@ -117,6 +120,26 @@ const servicePages = {
       'Water features are central to immersive landscapes, creating sensory appeal and a sense of calm.',
       'We engineer each water installation to integrate with planting, terraces and hardscape elements.',
       'Our water gardens are designed for beauty, functionality and long-term reliability.',
+    ],
+  },
+  'swimming-pool-landscaping': {
+    title: 'Swimming Pool Landscaping',
+    subtitle: 'Luxury bespoke swimming pools, infinity edges, and holistic outdoor poolscapes harmonised with nature.',
+    overview: [
+      'Turnkey swimming pool design, civil construction, filtration engineering, and surrounding landscape integration.',
+      'Specialising in luxury residential infinity pools, plunge pools, resort lagoons, and wellness lap pools.',
+      'Seamless fusion of natural stone coping, composite decking, aquatic lighting, and lush poolside microclimates.',
+    ],
+    highlights: [
+      'Custom infinity-edge, skimmer, and overflow pools designed for residences and resorts',
+      'Advanced eco-filtration, glass media, saltwater chlorination, and smart heating systems',
+      'Integrated poolside hardscaping: sunken fire pits, pergolas, sun decks, and submerged ledges',
+      'Chlorine-resistant botanical planting, privacy hedging, and tropical specimen trees',
+    ],
+    details: [
+      'A swimming pool is the centrepiece of outdoor luxury living. We approach pool design not merely as a water tank, but as a fully integrated architectural landscape.',
+      'Our engineering covers structural RCC design, multi-stage water filtration, UV sanitation, and precision hydraulic plumbing to ensure sparkling water with minimal maintenance.',
+      'From poolside decking and natural stone paving to ambient underwater illumination and lush tropical planting, we create private resort sanctuaries.',
     ],
   },
   'sustainable-landscaping': {

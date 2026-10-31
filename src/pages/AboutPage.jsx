@@ -87,6 +87,12 @@ const detailedServices = {
     'Artificial ponds',
     'Water walls'
   ],
+  swimmingPool: [
+    'Infinity & lap pools',
+    'Natural stone coping',
+    'Sun decks & pergolas',
+    'Aquatic LED lighting'
+  ],
   sustainable: [
     'Drip irrigation',
     'Native plantation',
@@ -268,6 +274,7 @@ export default function AboutPage({ setActiveModal }) {
               { title: 'Hardscape Landscaping', items: detailedServices.hardscape },
               { title: 'Rooftop Landscaping', items: detailedServices.rooftop },
               { title: 'Water Features', items: detailedServices.water },
+              { title: 'Swimming Pool Landscaping', items: detailedServices.swimmingPool },
               { title: 'Sustainable Landscaping', items: detailedServices.sustainable },
               { title: 'Large-Scale Landscaping', items: detailedServices.largeScale }
             ].map((service) => (
