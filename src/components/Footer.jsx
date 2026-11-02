@@ -82,7 +82,7 @@ export default function Footer() {
                 <a href="/services/hardscape-landscaping" className="hover:text-emerald-400 transition-colors">Hardscape Landscaping</a>
                 <a href="/services/rooftop-landscaping" className="hover:text-emerald-400 transition-colors">Rooftop Landscaping</a>
                 <a href="/services/water-feature-landscaping" className="hover:text-emerald-400 transition-colors">Water Feature Landscaping</a>
-                <a href="/services/swimming-pool-landscaping" className="hover:text-emerald-400 transition-colors">Swimming Pool Landscaping</a>
+                <a href="/services/swimming-pool-landscaping" className="hover:text-emerald-400 transition-colors">Swimming Pool & Fountain Landscaping</a>
                 <a href="/services/sustainable-landscaping" className="hover:text-emerald-400 transition-colors">Sustainable Green Infrastructure</a>
                 <a href="/services/large-scale-landscaping" className="hover:text-emerald-400 transition-colors">Large Scale Landscaping</a>
                 <a href="/services/b2b-plant-supply" className="hover:text-emerald-400 transition-colors">B2B Plant & Crop Supply</a>

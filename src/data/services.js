@@ -30,8 +30,8 @@ export const services = [
     image: "/images/service-8.jpg"
   },
   {
-    title: "Swimming Pool Landscaping",
-    desc: "Custom infinity pools, luxury plunge pools, sunken lounges, and integrated aquatic poolscapes surrounded by lush botanical borders.",
+    title: "Swimming Pool & Fountain Landscaping",
+    desc: "Custom infinity pools, luxury plunge pools, architectural water fountains, and integrated aquatic landscapes surrounded by lush botanical borders.",
     tag: "Aquatics",
     image: "/images/service-swimming-pool.jpg"
   },

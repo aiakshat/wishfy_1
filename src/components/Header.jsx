@@ -46,8 +46,8 @@ const servicesMenuItems = [
   },
   {
     slug: 'swimming-pool-landscaping',
-    title: 'Swimming Pool Landscaping',
-    description: 'Custom infinity pools, plunge pools & luxury poolscapes',
+    title: 'Swimming Pool & Fountain Landscaping',
+    description: 'Infinity pools, plunge pools, architectural fountains & poolscapes',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 15c2.5 0 3.5-1 6-1s3.5 1 6 1 3.5-1 6-1M3 19c2.5 0 3.5-1 6-1s3.5 1 6 1 3.5-1 6-1M15 5a2 2 0 100-4 2 2 0 000 4zm-4 4l3-2 3 3-2 3m-4-4l-3 4-2-1" />

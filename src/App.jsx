@@ -125,7 +125,7 @@ export default function App() {
       'hardscape-landscaping': 'Hardscape Landscaping',
       'rooftop-landscaping': 'Rooftop & Terrace Landscaping',
       'water-feature-landscaping': 'Water Features & Koi Ponds',
-      'swimming-pool-landscaping': 'Swimming Pool Landscaping',
+      'swimming-pool-landscaping': 'Swimming Pool & Fountain Landscaping',
       'sustainable-landscaping': 'Sustainable Green Infrastructure',
       'large-scale-landscaping': 'Large Scale Commercial Landscaping',
       'b2b-plant-supply': 'B2B Bulk Plant & Crop Supply',

@@ -9,7 +9,7 @@ const slugToServiceTitle = {
   'hardscape-landscaping': 'Hardscape Landscaping',
   'rooftop-landscaping': 'Rooftop Landscaping',
   'water-feature-landscaping': 'Water Feature Landscaping',
-  'swimming-pool-landscaping': 'Swimming Pool Landscaping',
+  'swimming-pool-landscaping': 'Swimming Pool & Fountain Landscaping',
   'sustainable-landscaping': 'Sustainable Green Infrastructure',
   'large-scale-landscaping': 'Large-Scale Landscaping',
   'b2b-plant-supply': 'B2B Plant & Crop Supply',
@@ -22,6 +22,7 @@ const serviceTitleToSlug = {
   'Hardscape Landscaping': 'hardscape-landscaping',
   'Rooftop Landscaping': 'rooftop-landscaping',
   'Water Feature Landscaping': 'water-feature-landscaping',
+  'Swimming Pool & Fountain Landscaping': 'swimming-pool-landscaping',
   'Swimming Pool Landscaping': 'swimming-pool-landscaping',
   'Sustainable Green Infrastructure': 'sustainable-landscaping',
   'B2B Plant & Crop Supply': 'b2b-plant-supply',
@@ -123,24 +124,74 @@ const servicePages = {
     ],
   },
   'swimming-pool-landscaping': {
-    title: 'Swimming Pool Landscaping',
-    subtitle: 'Luxury bespoke swimming pools, infinity edges, and holistic outdoor poolscapes harmonised with nature.',
+    title: 'Swimming Pool & Fountain Landscaping',
+    subtitle: 'Luxury bespoke swimming pools, architectural fountains, infinity edges, and holistic aquatic landscapes harmonised with nature.',
     overview: [
-      'Turnkey swimming pool design, civil construction, filtration engineering, and surrounding landscape integration.',
-      'Specialising in luxury residential infinity pools, plunge pools, resort lagoons, and wellness lap pools.',
-      'Seamless fusion of natural stone coping, composite decking, aquatic lighting, and lush poolside microclimates.',
+      'Turnkey swimming pool and fountain design, civil construction, hydraulic engineering, and surrounding landscape integration.',
+      'Specialising in luxury residential infinity pools, plunge pools, architectural water fountains, dancing fountains, and resort lagoons.',
+      'Seamless fusion of natural stone coping, underwater LED lighting choreography, composite decking, and lush poolside microclimates.',
     ],
     highlights: [
-      'Custom infinity-edge, skimmer, and overflow pools designed for residences and resorts',
-      'Advanced eco-filtration, glass media, saltwater chlorination, and smart heating systems',
-      'Integrated poolside hardscaping: sunken fire pits, pergolas, sun decks, and submerged ledges',
-      'Chlorine-resistant botanical planting, privacy hedging, and tropical specimen trees',
+      'Custom infinity-edge, skimmer, and overflow pools designed for residences, clubhouses, and luxury resorts',
+      'Architectural, dancing, musical, and water wall fountains with programmable nozzles and DMX LED illumination',
+      'Turnkey civil engineering, structural RCC basins, crystalline waterproofing, and multi-stage filtration',
+      'Advanced eco-filtration, glass media, saltwater chlorination, UV sanitation, and automated water management',
+      'Integrated poolside & fountain hardscaping: sunken lounges, fire pits, viewing decks, and stone coping',
+      'Chlorine & splash-resistant botanical planting, privacy hedging, and tropical specimen trees',
     ],
     details: [
-      'A swimming pool is the centrepiece of outdoor luxury living. We approach pool design not merely as a water tank, but as a fully integrated architectural landscape.',
-      'Our engineering covers structural RCC design, multi-stage water filtration, UV sanitation, and precision hydraulic plumbing to ensure sparkling water with minimal maintenance.',
-      'From poolside decking and natural stone paving to ambient underwater illumination and lush tropical planting, we create private resort sanctuaries.',
+      'Swimming pools and architectural fountains serve as the stunning centrepiece of luxury outdoor spaces. We approach aquatic design as a complete sensory landscape of sound, reflection, and light.',
+      'Our engineering covers structural RCC construction, hydraulic plumbing calculations, high-efficiency filtration, UV sanitation, and automated water-level regulation for minimal maintenance.',
+      'From dancing musical fountains and sheet waterfalls to infinity pools with natural stone coping and tropical greenery, we deliver private resort and civic sanctuaries.',
     ],
+    offerings: [
+      {
+        category: 'Swimming Pool Engineering',
+        title: 'Custom Swimming Pool Design & Construction',
+        desc: 'Turnkey luxury swimming pools engineered for private villas, residential communities, rooftop terraces, and hospitality resorts.',
+        items: [
+          'Infinity-edge, zero-edge overflow, and luxury skimmer pools',
+          'Plunge pools, lap pools, hydrotherapy spas & heated jacuzzis',
+          'Reinforced cement concrete (RCC) civil construction with multi-layer crystalline waterproofing',
+          'Glass mosaic tiling, natural stone coping, and anti-skid composite decks',
+          'Smart saltwater chlorinators, glass media eco-filters, and automated heat pumps'
+        ]
+      },
+      {
+        category: 'Fountain Design & Engineering',
+        title: 'Architectural & Musical Fountain Systems',
+        desc: 'Mesmerizing water displays, choreographed fountain installations, and modern water features for public plazas, estates, resorts, and commercial developments.',
+        items: [
+          'Architectural jet fountains, tiered classical fountains, and floating pond aerators',
+          'Musical & dancing fountains with DMX-controlled underwater multi-color LED lighting',
+          'Vertical sheer water walls, cascading stone waterfalls, and rain curtains',
+          'High-performance stainless steel hydraulic manifolds, submersible pumps, and precision brass nozzles',
+          'Automated water-treatment, filtration, anti-algae dosing, and smart water level controls'
+        ]
+      },
+      {
+        category: 'Aquatic Poolscape Integration',
+        title: 'Poolside Landscaping & Hardscape Living',
+        desc: 'Harmonizing water bodies with their surrounding green environments for a seamless indoor-outdoor luxury experience.',
+        items: [
+          'Sunken poolside fire pit lounges, pergolas, cabanas, and swim-up bars',
+          'Splash-resistant tropical specimen planting, privacy hedges, and ornamental palm groves',
+          'Submerged tanning ledges (baja shelves), underwater benches, and stepping stone pathways',
+          'Integrated drainage and runoff management to keep pool and fountain water pristine'
+        ]
+      },
+      {
+        category: 'Operations & Upgrades',
+        title: 'Fountain & Pool Maintenance & Modernization',
+        desc: 'Preventative care and refurbishment ensuring hydraulic efficiency, water crystal clarity, and mechanical longevity.',
+        items: [
+          'Routine water testing, chemical balance, filter backwashing, and vacuuming',
+          'Pump and motor servicing, nozzle descaling, and hydraulic pressure balancing',
+          'LED lighting retrofits and smart automation/IoT remote control upgrades',
+          'Basin leak detection, tile regrouting, and waterproofing rehabilitation'
+        ]
+      }
+    ]
   },
   'sustainable-landscaping': {
     title: 'Sustainable Green Infrastructure',
@@ -289,6 +340,45 @@ export default function ServicePage({slug, setActiveModal}) {
                 </div>
               </div>
             </div>
+
+            {page.offerings && (
+              <div className="mt-16 pt-12 border-t border-emerald-100">
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                  <span className="text-xs font-black uppercase tracking-widest text-emerald-600 block">Comprehensive Specialized Solutions</span>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-emerald-950 mt-2">Swimming Pool & Fountain Services</h3>
+                  <p className="text-sm text-slate-600 mt-2">Complete design, construction, mechanical engineering, and maintenance for residential, commercial, and hospitality projects.</p>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-8">
+                  {page.offerings.map((offering, idx) => (
+                    <div key={idx} className="bg-slate-50/70 rounded-3xl p-6 sm:p-8 border border-emerald-100/70 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-10 h-10 rounded-2xl bg-emerald-900 text-white flex items-center justify-center font-black text-sm shadow-md shrink-0">
+                            0{idx + 1}
+                          </div>
+                          <div>
+                            <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600 block">{offering.category}</span>
+                            <h4 className="text-lg font-black text-emerald-950">{offering.title}</h4>
+                          </div>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">{offering.desc}</p>
+                        <div className="space-y-2.5">
+                          {offering.items.map((item, itemIdx) => (
+                            <div key={itemIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                              <svg className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </div>
