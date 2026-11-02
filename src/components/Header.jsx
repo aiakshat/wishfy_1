@@ -100,7 +100,7 @@ const servicesMenuItems = [
   }
 ];
 
-export default function Header({isAboutPage = false, region, setRegion, mobileMenuOpen, setMobileMenuOpen, setActiveModal, showToast}) {
+export default function Header({ isAboutPage = false, region, setRegion, mobileMenuOpen, setMobileMenuOpen, setActiveModal, showToast }) {
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const sectionHref = (id) => (isAboutPage ? `/#${id}` : `#${id}`);
@@ -154,22 +154,22 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
       <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${showSolid ? 'bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-md' : 'bg-transparent border-b border-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-1">
-            
+
             {/* Logo area */}
             <a href="/" className="flex items-center">
-              <img 
-                src="/images/log-trans.png" 
-                alt="Wishfy Greens" 
-                className={`w-auto object-contain transition-all duration-300 ${showSolid ? 'h-24' : 'h-32 md:h-36 brightness-0 invert'}`} 
+              <img
+                src="/images/log-trans.png"
+                alt="Wishfy Greens"
+                className={`w-auto object-contain transition-all duration-300 ${showSolid ? 'h-24' : 'h-32 md:h-36 brightness-0 invert'}`}
               />
             </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              
+
               {/* Services Mega Menu */}
               <div className="relative">
-                <button 
+                <button
                   ref={serviceToggleRef}
                   onClick={toggleServiceMenu}
                   className={`text-sm font-semibold transition-colors flex items-center gap-1 ${textColorClass}`}
@@ -183,7 +183,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
 
                 {/* Mega Menu Dropdown */}
                 {servicesMenuOpen && (
-                  <div 
+                  <div
                     ref={servicePanelRef}
                     className="absolute left-1/2 top-full z-50 mt-3 -translate-x-1/2 bg-white border-t-4 border-emerald-500 shadow-2xl rounded-xl overflow-hidden animate-fadeIn"
                     style={{ width: 'min(calc(100vw - 2rem), 72rem)' }}
@@ -208,7 +208,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
                         </a>
                       ))}
                     </div>
-                    
+
                     <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 border-t border-emerald-200 px-8 py-6 flex items-center justify-between">
                       <div>
                         <p className="text-sm font-black text-emerald-950">Need a Custom Solution?</p>
@@ -235,19 +235,19 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
             <div className="hidden lg:flex items-center gap-4">
               {/* Regional selection widget */}
               <div className={`p-1.5 rounded-xl border flex items-center gap-1 transition-all duration-300 ${showSolid ? 'bg-emerald-50/80 border-emerald-100' : 'bg-white/10 border-white/20 text-white'}`}>
-                <button 
+                <button
                   onClick={() => { setRegion('india'); showToast("Switched currency & operational scope to India"); }}
                   className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${region === 'india' ? 'bg-emerald-800 text-white shadow-md' : (showSolid ? 'text-emerald-900 hover:bg-emerald-100/50' : 'text-emerald-100 hover:bg-white/10')}`}
                 >
                   🇮🇳 IN
                 </button>
-                <button 
+                <button
                   onClick={() => { setRegion('uae'); showToast("Switched currency & operational scope to UAE"); }}
                   className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${region === 'uae' ? 'bg-amber-600 text-white shadow-md' : (showSolid ? 'text-emerald-900 hover:bg-emerald-100/50' : 'text-emerald-100 hover:bg-white/10')}`}
                 >
                   🇦🇪 UAE
                 </button>
-                <button 
+                <button
                   onClick={() => { setRegion('global'); showToast("Showing global scope"); }}
                   className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${region === 'global' ? 'bg-slate-700 text-white shadow-md' : (showSolid ? 'text-emerald-900 hover:bg-emerald-100/50' : 'text-emerald-100 hover:bg-white/10')}`}
                 >
@@ -255,7 +255,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
                 </button>
               </div>
 
-              <button 
+              <button
                 onClick={() => setActiveModal('consultation')}
                 className={`text-sm font-bold px-5 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 ${showSolid ? 'bg-emerald-900 hover:bg-emerald-800 text-white' : 'bg-emerald-600 hover:bg-emerald-500 text-white'}`}
               >
@@ -265,7 +265,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
 
             {/* Hamburger Button for Mobile */}
             <div className="flex items-center gap-2 md:hidden">
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className={`p-2 rounded-xl transition-colors ${showSolid ? 'text-emerald-950 hover:bg-emerald-50' : 'text-white hover:bg-white/10'}`}
               >
@@ -286,10 +286,10 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-b border-emerald-100 py-4 px-6 animate-fadeIn">
             <div className="flex flex-col gap-4">
-              
+
               {/* Mobile Services Submenu */}
               <div className="pt-2">
-                <button 
+                <button
                   onClick={() => setServicesMenuOpen(!servicesMenuOpen)}
                   className="text-base font-bold text-emerald-950 flex items-center justify-between w-full pb-3"
                 >
@@ -298,7 +298,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
+
                 {servicesMenuOpen && (
                   <div className="space-y-4 pl-3 border-l-2 border-emerald-200 mb-3">
                     {servicesMenuItems.map((item, idx) => (
@@ -326,7 +326,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
               <a href="/about" onClick={() => setMobileMenuOpen(false)} className="text-base font-bold text-emerald-950">About Us</a>
               <a href="/contact-us" onClick={() => setMobileMenuOpen(false)} className="text-base font-bold text-emerald-950">Contact Us</a>
               <hr className="border-emerald-100" />
-              
+
               {/* Region controls on Mobile */}
               <div className="flex items-center justify-between bg-emerald-50 p-2 rounded-xl">
                 <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest">Region View:</span>
@@ -337,7 +337,7 @@ export default function Header({isAboutPage = false, region, setRegion, mobileMe
                 </div>
               </div>
 
-              <button 
+              <button
                 onClick={() => { setActiveModal('consultation'); setMobileMenuOpen(false); }}
                 className="w-full bg-emerald-900 text-white py-3 rounded-xl font-bold text-center shadow-md"
               >
